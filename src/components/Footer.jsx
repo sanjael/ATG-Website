@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -6,14 +8,14 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="#home" className="logo-link" style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <Link to="/" className="logo-link" style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
               <div style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', background: '#0a0a0a', border: '1px solid rgba(212, 163, 75, 0.3)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img src="/logo.png" alt="ATG Techz Logo" style={{ width: '120%', height: '120%', objectFit: 'cover', objectPosition: 'center 15%' }} />
               </div>
               <span className="logo-text" style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#fff', letterSpacing: '1px' }}>
                 ATG <span style={{ color: 'var(--accent-primary)' }}>Techz</span>
               </span>
-            </a>
+            </Link>
             <p style={{ marginBottom: '20px' }}>Building the future of web technology and AI architectures for forward-thinking enterprises.</p>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -43,17 +45,17 @@ const Footer = () => {
           <div>
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#process">Development Process</a></li>
-              <li><a href="#team">Meet the Team</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Our Services</Link></li>
+              <li><Link to="/process">Development Process</Link></li>
+              <li><Link to="/team">Meet the Team</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="footer-heading">Connect</h4>
             <ul className="footer-links">
-              <li><a href="#">Contact Us</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               <li><a href="#">Careers</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms of Service</a></li>

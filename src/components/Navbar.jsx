@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -17,8 +18,8 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container container">
         
-        {/* Restored the previous logo image structure */}
-        <a href="#home" className="logo-link" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+        {/* Restored the previous logo image structure, now using Link */}
+        <Link to="/" className="logo-link" style={{ display: 'flex', alignItems: 'center', gap: '15px' }} onClick={() => setIsOpen(false)}>
           <div style={{ width: '50px', height: '50px', borderRadius: '50%', overflow: 'hidden', background: '#0a0a0a', border: '1px solid rgba(200, 160, 74, 0.3)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <img 
               src="/logo.png" 
@@ -29,7 +30,7 @@ const Navbar = () => {
           <span className="logo-text" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff', letterSpacing: '1px' }}>
             ATG <span style={{ color: '#c8a04a' }}>Techz</span>
           </span>
-        </a>
+        </Link>
         
         <button 
           className="menu-icon" 
@@ -42,12 +43,12 @@ const Navbar = () => {
         </button>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li className="nav-item"><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
-          <li className="nav-item"><a href="#services" onClick={() => setIsOpen(false)}>Services</a></li>
-          <li className="nav-item"><a href="#process" onClick={() => setIsOpen(false)}>Process</a></li>
-          <li className="nav-item"><a href="#tools" onClick={() => setIsOpen(false)}>Tech Stack</a></li>
-          <li className="nav-item"><a href="#team" onClick={() => setIsOpen(false)}>Team</a></li>
-          <li className="nav-item"><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+          <li className="nav-item"><NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink></li>
+          <li className="nav-item"><NavLink to="/services" onClick={() => setIsOpen(false)}>Services</NavLink></li>
+          <li className="nav-item"><NavLink to="/process" onClick={() => setIsOpen(false)}>Process</NavLink></li>
+          <li className="nav-item"><NavLink to="/tech-stack" onClick={() => setIsOpen(false)}>Tech Stack</NavLink></li>
+          <li className="nav-item"><NavLink to="/team" onClick={() => setIsOpen(false)}>Team</NavLink></li>
+          <li className="nav-item"><NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink></li>
         </ul>
       </div>
     </nav>

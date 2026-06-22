@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useTypewriter from '../hooks/useTypewriter';
 import { ArrowRight } from 'lucide-react';
 
@@ -56,12 +57,12 @@ const Hero = () => {
         </p>
 
         <div className="hero-cta">
-          <a href="#services" className="btn btn-primary">
+          <Link to="/services" className="btn btn-primary">
             Explore Services <ArrowRight size={18} />
-          </a>
-          <a href="#contact" className="btn btn-secondary">
+          </Link>
+          <Link to="/contact" className="btn btn-secondary">
             Let's Talk
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const useScrollReveal = (dependency) => {
+  const location = useLocation();
+
   useEffect(() => {
     // Only run if the dependency (e.g. showSplash) allows it
     if (dependency) return;
@@ -28,7 +31,7 @@ const useScrollReveal = (dependency) => {
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [dependency]);
+  }, [dependency, location.pathname]);
 };
 
 export default useScrollReveal;

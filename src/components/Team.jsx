@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -51,9 +52,9 @@ const Team = () => {
           <p style={{ maxWidth: '600px', margin: '0 auto 30px' }}>
             Let's discuss how we can partner to build scalable, high-performance digital solutions for your business.
           </p>
-          <a href="#contact" className="btn btn-primary">
+          <Link to="/contact" className="btn btn-primary">
             Start a Project
-          </a>
+          </Link>
         </div>
       </div>
     </section>

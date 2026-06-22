@@ -92,6 +92,11 @@
   color: var(--accent-primary);
 }
 
+.nav-item a.active {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
 .menu-icon {
   display: none;
   cursor: pointer;
